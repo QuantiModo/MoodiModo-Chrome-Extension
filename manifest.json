@@ -4,13 +4,21 @@
   "name": "MoodiModo",
   "description": "An easy to use mood tracker that makes it easy to regularily track your mood with QuantiModo.",
   "version": "1.0",
-
+  "options_page": "options/options.html",
+  "icons": {  "16"	: "images/icon.png",
+				"48"	: "images/icon.png",
+                 "128"	: "images/icon.png" },
   "permissions": [
-	"cookies",
+	"alarms",
+	"notifications" ,
     "https://quantimo.do/*"
   ],
   "browser_action": {
     "default_icon": "images/icon.png",
     "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": ["js/moodEvent.js"],
+    "persistent": false
   }
 }

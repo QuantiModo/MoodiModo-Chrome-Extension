@@ -1,0 +1,79 @@
+<html id="t" i18n-values="dir:textdirection" class="focus-outline-visible" dir="ltr" hasflashplugin="" flashpluginsupportsclearsitedata="" enablepepperflashsettings=""><head>
+<meta charset="utf-8">
+<title i18n-content="optionsPageTitle">Settings</title>
+	<link rel="stylesheet" href="options-shared.css">
+	<link rel="stylesheet" href="options-content.css">
+</head>
+
+<body class="uber-frame" i18n-values=".style.fontFamily:fontfamily;.style.fontSize:fontsize" style="font-family: 'Segoe UI', Tahoma, sans-serif; font-size: 75%;">
+
+<div id="mainview" style="background: white">
+	<div id="mainview-content">
+		<div id="page-container">
+			<div id="settings" class="page">
+				<header style="-webkit-transform: none;">
+					<h1 i18n-content="settingsTitle">Settings</h1>
+				</header>
+			  
+				<section id="account-section">
+					<h3>Your account</h3>
+
+					<div id="sync-overview" class="settings-row" hidden="">
+						<p i18n-content="syncOverview">Sign in to QuantiModo to start using MoodiModo to track your mood</p>
+						<a i18n-values="href:syncLearnMoreURL" i18n-content="learnMore" target="_blank" href="https://support.google.com/chrome/?p=settings_sign_in">Learn more</a>
+					</div>
+
+					<div id="sync-status" class="settings-row">
+					  <span id="sync-status-text">Signed in as account@domain.com. Manage your synced data on <a href="https://quantimo.do" target="_blank">QuantiModo</a>.</span>
+					  <button id="sync-action-link" class="link-button" hidden=""></button>
+					</div>
+
+					<div id="sync-buttons" class="settings-row">
+						<button id="start-stop-sync">Disconnect your QuantiModo Account...</button>
+					</div>
+				</section>
+
+
+				<section>
+					<h3>Frequency</h3>
+					<span class="settings-row">Set how often MoodiModo alerts you to rate your mood.</span>
+					<div class="settings-row">
+						<select id="default-search-engine" class="weakrtl">
+							<option value="-1">Never</option>
+							<option value="60">Hourly</option>
+							<option value="180" selected="true">Every three hours</option>
+							<option value="720">Twice daily</option>
+							<option value="1440">Daily</option>
+							<option value="0.1">Debug (6 seconds)</option>
+						</select>
+					</div>
+				</section>
+			
+				<section id="privacy-section">
+					<h3 i18n-content="advancedSectionTitlePrivacy">Notifications</h3>
+					<span class="settings-row">Choose in what ways MoodiModo notifies you.</span>
+					<div>
+					  <div class="checkbox">
+						<span class="controlled-setting-with-label">
+						  <input id="searchSuggestEnabled" type="checkbox" checked="true">
+						  <span>
+							<label for="searchSuggestEnabled">Display a badge on MoodiModo's icon.</label>
+						  </span>
+						</span>
+					  </div>					
+					  <div class="checkbox">
+						<span class="controlled-setting-with-label">
+						  <input id="searchSuggestEnabled" type="checkbox" checked="true">
+						  <span>
+							<label for="searchSuggestEnabled">Show a system notification.</label>
+						  </span>
+						</span>
+					  </div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

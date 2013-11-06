@@ -12,12 +12,6 @@ function pushMeasurement(measurements, onDoneListener)
 	xhr.send(JSON.stringify(measurements));
 }
 
-function setIconBadge()
-{
-	var object = {text:"!"};
-	chrome.browserAction.setBadgeText(object);
-}
-
 function setMoodButtonListeners()
 {
 	document.getElementById('buttonMoodDepressed').onclick=onMoodButtonClicked;
@@ -74,9 +68,18 @@ var onMoodButtonClicked = function()
 				sectionSendingMood.innerText = "Done!";
 			}, 300);
 		});
+		
+	// Clear badge and notification
+	var badgeParams = {text:""};
+	chrome.browserAction.setBadgeText(badgeParams);
+	chrome.notifications.clear("moodReportNotification", function(){})
 }
 
 document.addEventListener('DOMContentLoaded', function () 
 {
+	var widthDiff = window.outerWidth - window.innerWidth;
+	var heightDiff = window.outerHeight - window.innerHeight;
+	window.resizeTo(346 + widthDiff, 60 + heightDiff);
+
 	setMoodButtonListeners();
 });
