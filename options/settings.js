@@ -1,3 +1,22 @@
+function loadAccountDetails()
+{
+	var xhr = new XMLHttpRequest();
+	xhr.open("GET", "https://quantimo.do/api/user", true);
+	xhr.onreadystatechange = function() 
+		{
+			if (xhr.readyState == 4) 
+			{
+				var userObject = JSON.parse(xhr.responseText);
+				if(typeof userObject['displayName'] !== "undefined")
+				{
+					var accountNameSpan = document.getElementById('accountNameSpan');
+					accountNameSpan.innerText = userObject['displayName'];
+				}
+			}
+		};
+	xhr.send();
+}
+
 var onIntervalChanged = function()
 {
 	var notificationInterval = parseInt(localStorage["notificationInterval"] || "180");
@@ -35,6 +54,8 @@ var showBadgeChanged = function()
 
 document.addEventListener('DOMContentLoaded', function () 
 {
+	loadAccountDetails();
+	
 	// Set notification interval select
 	var notificationIntervalSelect = document.getElementById('notificationIntervalSelect');
 	var notificationInterval = localStorage["notificationInterval"] || "180";

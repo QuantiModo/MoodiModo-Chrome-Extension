@@ -19,18 +19,17 @@ chrome.runtime.onInstalled.addListener(function()
 
 chrome.alarms.onAlarm.addListener(function(alarm)
 {
-	var options = {
-			type: "basic",
-			title: "How are you?",
-			message: "It's time to report your mood!",
-			iconUrl: "images/icon.png",
-			priority: 2
-		}
-
 	var showNotification = (localStorage["showNotification"] || "true") == "true" ? true : false;
 	if(showNotification)
 	{
-		chrome.notifications.create("moodReportNotification", options, function(id){});
+		var notificationParams = {
+			type: "basic",
+			title: "How are you?",
+			message: "It's time to report your mood!",
+			iconUrl: "images/icon_full.png",
+			priority: 2
+		}
+		chrome.notifications.create("moodReportNotification", notificationParams, function(id){});
 	}
 	
 	var showBadge = (localStorage["showBadge"] || "true") == "true" ? true : false;

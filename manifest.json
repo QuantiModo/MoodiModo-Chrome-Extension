@@ -2,12 +2,12 @@
   "manifest_version": 2,
 
   "name": "MoodiModo",
-  "description": "An easy to use mood tracker that makes it easy to regularily track your mood with QuantiModo.",
+  "description": "An easy to use mood tracker that simplifies regularily tracking your mood with QuantiModo.",
   "version": "1.0",
   "options_page": "options/options.html",
-  "icons": {  "16"	: "images/icon.png",
-				"48"	: "images/icon.png",
-                 "128"	: "images/icon.png" },
+  "icons": {"16"	: "images/icon_16.png",
+			"48"	: "images/icon_48.png",
+            "128"	: "images/icon_128.png" },
   "permissions": [
 	"alarms",
 	"notifications",

@@ -59,7 +59,7 @@ var onMoodButtonClicked = function()
 	sectionSendingMood.style.display = "block";
 	sectionSendingMood.style.opacity = "1";
 	sectionSendingMood.innerText = "Sending mood";
-	/*pushMeasurement(measurement, function(response) 
+	pushMeasurement(measurement, function(response) 
 		{
 			sectionSendingMood.style.opacity = "0";
 			setTimeout(function()
@@ -67,7 +67,7 @@ var onMoodButtonClicked = function()
 				sectionSendingMood.style.opacity = "1";
 				sectionSendingMood.innerText = "Done!";
 			}, 300);
-		});*/
+		});
 		
 	// Clear badge and notification
 	var badgeParams = {text:""};
