@@ -2,10 +2,19 @@ chrome.runtime.onInstalled.addListener(function()
 {
 	console.log("Installed");
 	
-	var alarmInfo = {periodInMinutes: 0.1}
-	chrome.alarms.create("moodReportAlarm", alarmInfo)
+	var notificationInterval = parseInt(localStorage["notificationInterval"] || "180");
 	
-	console.log("Alarm set");
+	if(notificationInterval == -1)
+	{
+		chrome.alarms.clear("moodReportAlarm");
+		console.log("Alarm cancelled");
+	}
+	else
+	{
+		var alarmInfo = {periodInMinutes: notificationInterval}
+		chrome.alarms.create("moodReportAlarm", alarmInfo)
+		console.log("Alarm set, every " + notificationInterval + " minutes");
+	}
 });
 
 chrome.alarms.onAlarm.addListener(function(alarm)
@@ -18,10 +27,18 @@ chrome.alarms.onAlarm.addListener(function(alarm)
 			priority: 2
 		}
 
-	chrome.notifications.create("moodReportNotification", options, function(id){});
+	var showNotification = (localStorage["showNotification"] || "true") == "true" ? true : false;
+	if(showNotification)
+	{
+		chrome.notifications.create("moodReportNotification", options, function(id){});
+	}
 	
-	var badgeParams = {text:"?"};
-	chrome.browserAction.setBadgeText(badgeParams);
+	var showBadge = (localStorage["showBadge"] || "true") == "true" ? true : false;
+	if(showBadge)
+	{
+		var badgeParams = {text:"?"};
+		chrome.browserAction.setBadgeText(badgeParams);
+	}
 });
 
 chrome.notifications.onClicked.addListener(function(notificationId)

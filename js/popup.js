@@ -59,7 +59,7 @@ var onMoodButtonClicked = function()
 	sectionSendingMood.style.display = "block";
 	sectionSendingMood.style.opacity = "1";
 	sectionSendingMood.innerText = "Sending mood";
-	pushMeasurement(measurement, function(response) 
+	/*pushMeasurement(measurement, function(response) 
 		{
 			sectionSendingMood.style.opacity = "0";
 			setTimeout(function()
@@ -67,7 +67,7 @@ var onMoodButtonClicked = function()
 				sectionSendingMood.style.opacity = "1";
 				sectionSendingMood.innerText = "Done!";
 			}, 300);
-		});
+		});*/
 		
 	// Clear badge and notification
 	var badgeParams = {text:""};
@@ -77,9 +77,10 @@ var onMoodButtonClicked = function()
 
 document.addEventListener('DOMContentLoaded', function () 
 {
-	var widthDiff = window.outerWidth - window.innerWidth;
-	var heightDiff = window.outerHeight - window.innerHeight;
-	window.resizeTo(346 + widthDiff, 60 + heightDiff);
+	var wDiff = (346 - window.innerWidth);
+	var hDiff = (60 - window.innerHeight);
+	
+	window.resizeBy(wDiff, hDiff);
 
 	setMoodButtonListeners();
 });

@@ -10,7 +10,8 @@
                  "128"	: "images/icon.png" },
   "permissions": [
 	"alarms",
-	"notifications" ,
+	"notifications",
+	"storage",
     "https://quantimo.do/*"
   ],
   "browser_action": {

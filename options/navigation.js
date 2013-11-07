@@ -1,13 +1,3 @@
-function showSettings()
-{
-
-}
-
-function showAppearance()
-{
-	alert("Appearance");
-}
-
 var onNavigationButtonClicked = function()
 {
 	var buttonId = this.id;

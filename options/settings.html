@@ -3,6 +3,8 @@
 <title i18n-content="optionsPageTitle">Settings</title>
 	<link rel="stylesheet" href="options-shared.css">
 	<link rel="stylesheet" href="options-content.css">
+	
+	<script src="settings.js"></script>
 </head>
 
 <body class="uber-frame" i18n-values=".style.fontFamily:fontfamily;.style.fontSize:fontsize" style="font-family: 'Segoe UI', Tahoma, sans-serif; font-size: 75%;">
@@ -25,11 +27,11 @@
 
 					<div id="sync-status" class="settings-row">
 					  <span id="sync-status-text">Signed in as account@domain.com. Manage your synced data on <a href="https://quantimo.do" target="_blank">QuantiModo</a>.</span>
-					  <button id="sync-action-link" class="link-button" hidden=""></button>
+					  <!--<button id="sync-action-link" class="link-button" hidden=""></button>-->
 					</div>
 
 					<div id="sync-buttons" class="settings-row">
-						<button id="start-stop-sync">Disconnect your QuantiModo Account...</button>
+						<!--<button id="start-stop-sync">Disconnect your QuantiModo Account...</button>-->
 					</div>
 				</section>
 
@@ -38,13 +40,13 @@
 					<h3>Frequency</h3>
 					<span class="settings-row">Set how often MoodiModo alerts you to rate your mood.</span>
 					<div class="settings-row">
-						<select id="default-search-engine" class="weakrtl">
+						<select id="notificationIntervalSelect" class="weakrtl">
 							<option value="-1">Never</option>
 							<option value="60">Hourly</option>
-							<option value="180" selected="true">Every three hours</option>
+							<option value="180">Every three hours</option>
 							<option value="720">Twice daily</option>
 							<option value="1440">Daily</option>
-							<option value="0.1">Debug (6 seconds)</option>
+							<option value="0">Debug (instant)</option>
 						</select>
 					</div>
 				</section>
@@ -55,17 +57,17 @@
 					<div>
 					  <div class="checkbox">
 						<span class="controlled-setting-with-label">
-						  <input id="searchSuggestEnabled" type="checkbox" checked="true">
+						  <input id="showBadgeCheckbox" type="checkbox">
 						  <span>
-							<label for="searchSuggestEnabled">Display a badge on MoodiModo's icon.</label>
+							<label for="showBadgeCheckbox">Display a badge on MoodiModo's icon.</label>
 						  </span>
 						</span>
 					  </div>					
 					  <div class="checkbox">
 						<span class="controlled-setting-with-label">
-						  <input id="searchSuggestEnabled" type="checkbox" checked="true">
+						  <input id="showNotificationCheckbox" type="checkbox">
 						  <span>
-							<label for="searchSuggestEnabled">Show a system notification.</label>
+							<label for="showNotificationCheckbox">Show a system notification.</label>
 						  </span>
 						</span>
 					  </div>
