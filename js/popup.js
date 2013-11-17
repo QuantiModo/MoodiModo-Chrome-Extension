@@ -66,6 +66,10 @@ var onMoodButtonClicked = function()
 			{
 				sectionSendingMood.style.opacity = "1";
 				sectionSendingMood.innerText = "Done!";
+				setTimeout(function()
+				{
+					window.close();
+				}, 800);
 			}, 300);
 		});
 		
