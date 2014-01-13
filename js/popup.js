@@ -12,6 +12,13 @@ function pushMeasurement(measurements, onDoneListener)
 	xhr.send(JSON.stringify(measurements));
 }
 
+function clearNotifications()
+{
+	var badgeParams = {text:""};
+	chrome.browserAction.setBadgeText(badgeParams);
+	chrome.notifications.clear("moodReportNotification", function(){});
+}
+
 function setMoodButtonListeners()
 {
 	document.getElementById('buttonMoodDepressed').onclick=onMoodButtonClicked;
@@ -55,28 +62,27 @@ var onMoodButtonClicked = function()
 	
 	var sectionRateMood = document.getElementById("sectionRateMood");
 	var sectionSendingMood = document.getElementById("sectionSendingMood");
-	sectionRateMood.style.opacity = "0";
-	sectionSendingMood.style.display = "block";
-	sectionSendingMood.style.opacity = "1";
-	sectionSendingMood.innerText = "Sending mood";
-	pushMeasurement(measurement, function(response) 
-		{
-			sectionSendingMood.style.opacity = "0";
-			setTimeout(function()
-			{
-				sectionSendingMood.style.opacity = "1";
-				sectionSendingMood.innerText = "Done!";
-				setTimeout(function()
+	
+	sectionRateMood.className = "invisible";
+	setTimeout(function()
+	{
+			sectionRateMood.style.display = "none";
+
+			sectionSendingMood.innerText = "Sending mood";
+			sectionSendingMood.style.display = "block";
+			sectionSendingMood.className = "visible";
+			pushMeasurement(measurement, function(response) 
 				{
-					window.close();
-				}, 800);
-			}, 300);
-		});
-		
-	// Clear badge and notification
-	var badgeParams = {text:""};
-	chrome.browserAction.setBadgeText(badgeParams);
-	chrome.notifications.clear("moodReportNotification", function(){})
+					sectionSendingMood.className = "invisible";
+					setTimeout(function()
+					{
+						window.close();
+					}, 300);
+				});
+				
+			//clearNotifications();
+		}, 400 );
+
 }
 
 document.addEventListener('DOMContentLoaded', function () 
