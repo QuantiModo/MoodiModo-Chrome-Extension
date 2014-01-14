@@ -1,17 +1,3 @@
-function pushMeasurement(measurements, onDoneListener)
-{
-	var xhr = new XMLHttpRequest();
-	xhr.open("POST", "https://quantimo.do/api/measurements", true);
-	xhr.onreadystatechange = function() 
-		{
-			if (xhr.readyState == 4) 
-			{
-				onDoneListener(xhr.responseText);
-			}
-		};
-	xhr.send(JSON.stringify(measurements));
-}
-
 function clearNotifications()
 {
 	var badgeParams = {text:""};
@@ -30,6 +16,7 @@ function setMoodButtonListeners()
 
 var onMoodButtonClicked = function()
 {
+	// Figure out what rating was selected
 	var buttonId = this.id;
 	if(buttonId == "buttonMoodDepressed")
 	{
@@ -51,16 +38,41 @@ var onMoodButtonClicked = function()
 	{
 		var moodValue = 5;
 	}
+	else
+	{
+		console.log("How did I get here...");
+		return;
+	}
 	
-	var measurement = 	[{
-							source:		"MoodiModo",
-							variable:	"Overall Mood",
-							timestamp: 	Math.floor(Date.now() / 1000), 
-							value: 		moodValue, 
-							unit:		"/5"
-						}];
+	// Create an array of measurements
+	var measurements = 	[
+							{
+								timestamp: 	Math.floor(Date.now() / 1000), 
+								value: 		moodValue
+							}
+						];
+	// Add it to a request, payload is what we'll send to QuantiModo
+	var request =		{
+							message: "uploadMeasurements",
+							payload:[
+										{
+											measurements:			measurements,
+											name: 					"Overall Mood",
+											source: 				"MoodiModo",
+											category: 				"Mood",
+											combinationOperation: 	"MEAN",
+											unit:					"/5"
+										}
+									]
+									
+						};
+	// Request our background script to upload it for us
+	chrome.extension.sendMessage(request);
 	
-	var sectionRateMood = document.getElementById("sectionRateMood");
+	clearNotifications();
+	window.close();
+	
+	/*var sectionRateMood = document.getElementById("sectionRateMood");
 	var sectionSendingMood = document.getElementById("sectionSendingMood");
 	
 	sectionRateMood.className = "invisible";
@@ -81,8 +93,7 @@ var onMoodButtonClicked = function()
 				});
 				
 			clearNotifications();
-		}, 400 );
-
+		}, 400 );*/
 }
 
 document.addEventListener('DOMContentLoaded', function () 

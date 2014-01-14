@@ -1,7 +1,12 @@
+/***
+****	EVENT HANDLERS
+***/
+
+/*
+**	Called when the extension is installed
+*/
 chrome.runtime.onInstalled.addListener(function() 
 {
-	console.log("Installed");
-	
 	var notificationInterval = parseInt(localStorage["notificationInterval"] || "180");
 	
 	if(notificationInterval == -1)
@@ -17,6 +22,9 @@ chrome.runtime.onInstalled.addListener(function()
 	}
 });
 
+/*
+**	Called when an alarm goes off (we only have one)
+*/
 chrome.alarms.onAlarm.addListener(function(alarm)
 {
 	var showNotification = (localStorage["showNotification"] || "true") == "true" ? true : false;
@@ -40,6 +48,9 @@ chrome.alarms.onAlarm.addListener(function(alarm)
 	}
 });
 
+/*
+**	Called when the "report your mood" notification is clicked
+*/
 chrome.notifications.onClicked.addListener(function(notificationId)
 {
 	if(notificationId == "moodReportNotification")
@@ -54,3 +65,43 @@ chrome.notifications.onClicked.addListener(function(notificationId)
 		chrome.windows.create(windowParams);
 	}
 });
+
+/*
+**	Handles extension-specific requests that come in, such as a 
+** 	request to upload a new measurement
+*/
+chrome.extension.onMessage.addListener(function(request, sender, sendResponse)
+{
+	console.log("Received request: " + request.message);
+	if(request.message == "uploadMeasurements") 
+	{
+		pushMeasurements(request.payload, null);
+	}
+});
+
+
+
+/***
+****	HELPER FUNCTIONS
+***/
+
+function pushMeasurements(measurements, onDoneListener)
+{
+	var xhr = new XMLHttpRequest();
+	xhr.open("POST", "https://quantimo.do/api/measurements/v2", true);
+	xhr.onreadystatechange = function() 
+		{
+			// If the request is completed
+			if (xhr.readyState == 4) 
+			{
+				console.log("QuantiModo responds:");
+				console.log(xhr.responseText);
+				
+				if(onDoneListener != null)
+				{
+					onDoneListener(xhr.responseText);
+				}
+			}
+		};
+	xhr.send(JSON.stringify(measurements));
+}
