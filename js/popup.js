@@ -80,7 +80,7 @@ var onMoodButtonClicked = function()
 					}, 300);
 				});
 				
-			//clearNotifications();
+			clearNotifications();
 		}, 400 );
 
 }
