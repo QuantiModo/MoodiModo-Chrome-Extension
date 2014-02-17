@@ -6,6 +6,8 @@ The world's first mood-tracking Chrome extension
 Brought to you from the brilliant mind of Quint Stoffers!
 
 
+https://chrome.google.com/webstore/detail/moodimodo/
+
 Mental health is THE greatest unmet need of our time. About half of the people you know will develop a mental illness at some point during their lifetime. Over 50 million Americans currently suffer from some form of mental illness. MoodiModo is intended to help those who suffer from mood disorders such as major depressive disorder, dysthymic disorder, and bipolar disorder. 
 
 You can't manage what you don't measure. Hence, it is crucial that mood be continually tracked and quantified in order to assess the effectiveness of various treatments. Those suffering from depression are characteristically non-compliant towards most avenues of treatment, including mood tracking.
