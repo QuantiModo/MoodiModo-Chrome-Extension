@@ -3,7 +3,7 @@
 
   "name": "MoodiModo",
   "description": "An easy to use mood tracker that simplifies regularily tracking your mood with QuantiModo.",
-  "version": "1.0",
+  "version": "1.0.1",
   "options_page": "options/options.html",
   "icons": {"16"	: "images/icon_16.png",
 			"48"	: "images/icon_48.png",
