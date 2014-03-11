@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
 
-  "name": "MoodiModo",
-  "description": "An easy to use mood tracker that simplifies regularily tracking your mood with QuantiModo.",
+  "name": "MoodiModo (Beta)",
+  "description": "If you are logged into https://quantimo.do/, MoodiModo for Chrome allows you to easily track your mood.",
   "version": "1.0.1",
   "options_page": "options/options.html",
   "icons": {"16"	: "images/icon_16.png",
