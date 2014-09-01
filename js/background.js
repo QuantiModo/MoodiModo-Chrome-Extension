@@ -3,6 +3,23 @@
 ***/
 
 /*
+**	Returns true in the result listener if the user is logged in, false if not
+*/
+function isUserLoggedIn(resultListener)
+{
+	chrome.cookies.get({ url: 'https://quantimo.do', name: 'wordpress_logged_in_df6e405f82a01fe45903695de91ec81d' },
+	  function (cookie) {
+		if (cookie) {
+		  console.log(cookie.value);
+		}
+		else {
+			var url = "https://quantimo.do/analyze";
+			chrome.tabs.create({"url":url, "selected":true});
+		}
+	});
+}
+
+/*
 **	Called when the extension is installed
 */
 chrome.runtime.onInstalled.addListener(function() 
