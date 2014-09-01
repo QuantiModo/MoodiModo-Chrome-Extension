@@ -12,6 +12,8 @@
 	"alarms",
 	"notifications",
 	"storage",
+	"cookies",
+	"tabs",
     "https://quantimo.do/*"
   ],
   "browser_action": {
