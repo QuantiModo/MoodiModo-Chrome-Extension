@@ -104,4 +104,15 @@ document.addEventListener('DOMContentLoaded', function ()
 	window.resizeBy(wDiff, hDiff);
 
 	setMoodButtonListeners();
+	var backgroundPage = chrome.extension.getBackgroundPage();
+	backgroundPage.isUserLoggedIn(function(isLoggedIn)
+	{
+		if(!isLoggedIn)
+		{
+
+		}
+	});
+
 });
+
+
