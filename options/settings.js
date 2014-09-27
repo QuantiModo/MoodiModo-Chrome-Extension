@@ -9,8 +9,16 @@ function loadAccountDetails()
 				var userObject = JSON.parse(xhr.responseText);
 				if(typeof userObject['displayName'] !== "undefined")
 				{
+					document.getElementById('accountNameSpanHide').style.display="none";
 					var accountNameSpan = document.getElementById('accountNameSpan');
 					accountNameSpan.innerText = userObject['displayName'];
+					
+				} else {
+
+					document.getElementById('accountNameSpan').style.display="none";
+					document.getElementById('accountNameSpanHide').style.display="display";
+					
+
 				}
 			}
 		};

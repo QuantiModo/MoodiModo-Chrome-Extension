@@ -98,12 +98,12 @@ var onMoodButtonClicked = function()
 
 document.addEventListener('DOMContentLoaded', function () 
 {
+	//console.log('pankajkmar');
 	var wDiff = (346 - window.innerWidth);
 	var hDiff = (60 - window.innerHeight);
 	
 	window.resizeBy(wDiff, hDiff);
 
-	setMoodButtonListeners();
 	var backgroundPage = chrome.extension.getBackgroundPage();
 	backgroundPage.isUserLoggedIn(function(isLoggedIn)
 	{
@@ -112,6 +112,8 @@ document.addEventListener('DOMContentLoaded', function ()
 
 		}
 	});
+
+	setMoodButtonListeners();
 
 });
 
