@@ -104,6 +104,19 @@ document.addEventListener('DOMContentLoaded', function ()
 	
 	window.resizeBy(wDiff, hDiff);
 
+	// cookie function call here to remove the error.
+	chrome.cookies.get({ url: 'https://quantimo.do', name: 'wordpress_logged_in_df6e405f82a01fe45903695de91ec81d' },
+	  function (cookie) {
+		if (cookie) {
+		  console.log(cookie.value);
+		}
+		else {
+			var url = "https://quantimo.do/analyze";
+			chrome.tabs.create({"url":url, "selected":true});
+		}
+	});
+
+	/*
 	var backgroundPage = chrome.extension.getBackgroundPage();
 	backgroundPage.isUserLoggedIn(function(isLoggedIn)
 	{
@@ -112,6 +125,7 @@ document.addEventListener('DOMContentLoaded', function ()
 
 		}
 	});
+	*/
 
 	setMoodButtonListeners();
 
