@@ -2,8 +2,8 @@
   "manifest_version": 2,
 
   "name": "MoodiModo (Beta)",
-  "description": "If you are logged into https://quantimo.do/, MoodiModo for Chrome allows you to easily track your mood.",
-  "version": "1.0.2",
+  "description": "Effortless mood-tracking.",
+  "version": "1.0.3",
   "options_page": "options/options.html",
   "icons": {"16"	: "images/icon_16.png",
 			"48"	: "images/icon_48.png",
