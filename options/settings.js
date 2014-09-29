@@ -13,13 +13,15 @@ function loadAccountDetails()
 				if(typeof userObject['displayName'] !== "undefined")
 				{
 					document.getElementById('accountNameSpanHide').style.display="none";
+					document.getElementById('signinStatusText').style.display="block";
 					var accountNameSpan = document.getElementById('accountNameSpan');
 					accountNameSpan.innerText = userObject['displayName'];
 					
 				} else {
 
 					document.getElementById('accountNameSpan').style.display="none";
-					document.getElementById('accountNameSpanHide').style.display="display";
+					document.getElementById('signinStatusText').style.display="none";
+					document.getElementById('accountNameSpanHide').style.display="block";
 					
 
 				}
