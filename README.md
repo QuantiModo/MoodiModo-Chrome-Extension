@@ -5,6 +5,8 @@ The world's first mood-tracking Chrome extension!
 
 Get it from the [Chrome Web Store](https://chrome.google.com/webstore/detail/moodimodo/lncgjbhijecjdbdgeigfodmiimpmlelg?hl=en-US)!
 
+![moodimodo chrome extension screenshot 1280x800](https://cloud.githubusercontent.com/assets/2808553/8192499/3d0e4cac-1434-11e5-91e9-8854b1d0ecb3.jpg)
+
 IMPORTANT: YOU MUST BE LOGGED INTO https://quantimo.do/ FOR YOUR RATINGS TO BE RECORDED. THIS IS A BETA TESTING RELEASE. PLEASE EMAIL INFO@QUANTIMO.DO WITH QUESTIONS OR SUGGESTIONS AND I'LL RESPOND IMMEDIATELY. THANK YOU!
 
 The MoodiModo Chrome extension makes tracking one's mood effortless. Click the smiley face in the upper right hand corner and you just taken the first step towards true insights about what really causes your psychological state.
