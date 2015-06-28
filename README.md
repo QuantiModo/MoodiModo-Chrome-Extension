@@ -1,6 +1,8 @@
 MoodiModo-Chrome-Extension
 ==========================
 
+[![Code Climate](https://codeclimate.com/github/Abolitionist-Project/MoodiModo-Chrome/badges/gpa.svg)](https://codeclimate.com/github/Abolitionist-Project/MoodiModo-Chrome)
+
 The world's first mood-tracking Chrome extension!
 
 Get it from the [Chrome Web Store](https://chrome.google.com/webstore/detail/moodimodo/lncgjbhijecjdbdgeigfodmiimpmlelg?hl=en-US)!
