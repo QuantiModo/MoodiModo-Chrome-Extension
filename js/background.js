@@ -7,13 +7,13 @@
 */
 function isUserLoggedIn(resultListener)
 {
-	chrome.cookies.get({ url: 'https://quantimo.do', name: 'wordpress_logged_in_df6e405f82a01fe45903695de91ec81d' },
+	chrome.cookies.get({ url: 'https://app.quantimo.do', name: 'wordpress_logged_in_c9005e0fb733417360658b145e2ed413' },
 	  function (cookie) {
 		if (cookie) {
 		  console.log(cookie.value);
 		}
 		else {
-			var url = "https://quantimo.do/analyze";
+			var url = "https://app.quantimo.do/wp-login.php";
 			chrome.tabs.create({"url":url, "selected":true});
 		}
 	});
@@ -105,7 +105,7 @@ chrome.extension.onMessage.addListener(function(request, sender, sendResponse)
 function pushMeasurements(measurements, onDoneListener)
 {
 	var xhr = new XMLHttpRequest();
-	xhr.open("POST", "https://quantimo.do/api/measurements/v2", true);
+	xhr.open("POST", "https://app.quantimo.do/api/measurements/v2", true);
 	xhr.onreadystatechange = function() 
 		{
 			// If the request is completed

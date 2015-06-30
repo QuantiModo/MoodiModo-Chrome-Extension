@@ -105,13 +105,13 @@ document.addEventListener('DOMContentLoaded', function ()
 	window.resizeBy(wDiff, hDiff);
 
 	// cookie function call here to remove the error.
-	chrome.cookies.get({ url: 'https://quantimo.do', name: 'wordpress_logged_in_df6e405f82a01fe45903695de91ec81d' },
+	chrome.cookies.get({ url: 'https://app.quantimo.do', name: 'wordpress_logged_in_c9005e0fb733417360658b145e2ed413' },
 	  function (cookie) {
 		if (cookie) {
 		  console.log(cookie.value);
 		}
 		else {
-			var url = "https://quantimo.do/analyze";
+			var url = "https://app.quantimo.do/wp-login.php";
 			chrome.tabs.create({"url":url, "selected":true});
 		}
 	});

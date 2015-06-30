@@ -1,15 +1,11 @@
 MoodiModo-Chrome-Extension
 ==========================
 
-[![Code Climate](https://codeclimate.com/github/Abolitionist-Project/MoodiModo-Chrome/badges/gpa.svg)](https://codeclimate.com/github/Abolitionist-Project/MoodiModo-Chrome)
-
 The world's first mood-tracking Chrome extension!
 
 Get it from the [Chrome Web Store](https://chrome.google.com/webstore/detail/moodimodo/lncgjbhijecjdbdgeigfodmiimpmlelg?hl=en-US)!
 
-![moodimodo chrome extension screenshot 1280x800](https://cloud.githubusercontent.com/assets/2808553/8192499/3d0e4cac-1434-11e5-91e9-8854b1d0ecb3.jpg)
-
-IMPORTANT: YOU MUST BE LOGGED INTO https://quantimo.do/ FOR YOUR RATINGS TO BE RECORDED. THIS IS A BETA TESTING RELEASE. PLEASE EMAIL INFO@QUANTIMO.DO WITH QUESTIONS OR SUGGESTIONS AND I'LL RESPOND IMMEDIATELY. THANK YOU!
+IMPORTANT: YOU MUST BE LOGGED INTO https://app.quantimo.do/ FOR YOUR RATINGS TO BE RECORDED. THIS IS A BETA TESTING RELEASE. PLEASE EMAIL INFO@QUANTIMO.DO WITH QUESTIONS OR SUGGESTIONS AND I'LL RESPOND IMMEDIATELY. THANK YOU!
 
 The MoodiModo Chrome extension makes tracking one's mood effortless. Click the smiley face in the upper right hand corner and you just taken the first step towards true insights about what really causes your psychological state.
 
@@ -20,7 +16,7 @@ The MoodiModo Chrome extension makes tracking one's mood effortless. Click the s
 * Easily track mood on a regular basis using a unique pop-up interface.
 * Figure out what affects your mood.
 * High Resolution Tracking
-* Identify triggers for symptoms and quantify the effectiveness of treatments at [QuantiModo](https://quantimo.do/)
+* Identify triggers for symptoms and quantify the effectiveness of treatments at [QuantiModo](https://app.quantimo.do/)
 
 ### [Modify MoodiModo and Make Your Own Extension](https://github.com/mikepsinn/MoodiModo-Chrome)
 MoodiModo for Android is an example open-source application that QuantiModo supports. Make your very own self-tracking application to track the variables that you care about. 
