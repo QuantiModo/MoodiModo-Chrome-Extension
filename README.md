@@ -1,6 +1,8 @@
 MoodiModo-Chrome-Extension
 ==========================
 
+[![Codacy Badge](https://www.codacy.com/project/badge/79104e8774de4a278079d922ce935b24)](https://www.codacy.com/app/m_3/MoodiModo-Chrome)
+
 The world's first mood-tracking Chrome extension!
 
 Get it from the [Chrome Web Store](https://chrome.google.com/webstore/detail/moodimodo/lncgjbhijecjdbdgeigfodmiimpmlelg?hl=en-US)!
