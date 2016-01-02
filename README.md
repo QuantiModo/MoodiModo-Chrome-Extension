@@ -1,11 +1,13 @@
 MoodiModo-Chrome-Extension
 ==========================
 
+[![Codacy Badge](https://www.codacy.com/project/badge/79104e8774de4a278079d922ce935b24)](https://www.codacy.com/app/m_3/MoodiModo-Chrome)
+
 The world's first mood-tracking Chrome extension!
 
 Get it from the [Chrome Web Store](https://chrome.google.com/webstore/detail/moodimodo/lncgjbhijecjdbdgeigfodmiimpmlelg?hl=en-US)!
 
-IMPORTANT: YOU MUST BE LOGGED INTO https://app.quantimo.do/ FOR YOUR RATINGS TO BE RECORDED. THIS IS A BETA TESTING RELEASE. PLEASE EMAIL INFO@QUANTIMO.DO WITH QUESTIONS OR SUGGESTIONS AND I'LL RESPOND IMMEDIATELY. THANK YOU!
+IMPORTANT: YOU MUST BE LOGGED INTO https://quantipress.quantimo.do/ FOR YOUR RATINGS TO BE RECORDED. THIS IS A BETA TESTING RELEASE. PLEASE EMAIL INFO@QUANTIMO.DO WITH QUESTIONS OR SUGGESTIONS AND I'LL RESPOND IMMEDIATELY. THANK YOU!
 
 The MoodiModo Chrome extension makes tracking one's mood effortless. Click the smiley face in the upper right hand corner and you just taken the first step towards true insights about what really causes your psychological state.
 
@@ -16,10 +18,10 @@ The MoodiModo Chrome extension makes tracking one's mood effortless. Click the s
 * Easily track mood on a regular basis using a unique pop-up interface.
 * Figure out what affects your mood.
 * High Resolution Tracking
-* Identify triggers for symptoms and quantify the effectiveness of treatments at [QuantiModo](https://app.quantimo.do/)
+* Identify triggers for symptoms and quantify the effectiveness of treatments at [QuantiModo](https://quantipress.quantimo.do/)
 
 ### [Modify MoodiModo and Make Your Own Extension](https://github.com/mikepsinn/MoodiModo-Chrome)
-MoodiModo for Android is an example open-source application that QuantiModo supports. Make your very own self-tracking application to track the variables that you care about. 
+MoodiModo for Android is an example open-source application that QuantiModo supports. Make your very own self-tracking application to track the variables that you care about.
 
 ##### The Costs of Mental Illness
 
@@ -36,11 +38,10 @@ The social sharing features of MoodiModo would facilitate social support that is
 
 ##### How to Figure Out What Affects Your Mood
 
-Physical and environmental factors influence how you feel, just as emotions often cause changes in your physical system. There are 100 billion neurons in the human brain, and each of them is busy most of the time constantly sending tiny electrical impulses from one brain cell to another.  This signalling is modulated by chemicals called neurotransmitters. This activity is the biochemical basis of feelings.
+Physical and environmental factors influence how you feel, just as emotions often cause changes in your physical system. There are 100 billion neurons in the human brain, and each of them is busy most of the time constantly sending tiny electrical impulses from one brain cell to another.  This signaling is modulated by chemicals called neurotransmitters. This activity is the biochemical basis of feelings.
 
 In turn, brain chemistry is influenced by a number of factors including degree of social interaction, sleep, diet, medication, and physical activity. Mood data from MoodiModo can also be automatically uploaded to the QuantiModo website.  At QuantiModo, this data can be combined with data from other applications, devices and electronic health records.  Since the human mind is not powerful enough to retain all of the necessary information, this data integration feature is essential to identifying correlations and causal relationships.
 
 ##### Crowdsourcing Cures
 
 Users will also have the option to anonymously donate their data to the Mind First Foundation, the Personal Genome Project, and other researchers in order to help facilitate the crowdsourced observational research which will eventually lead to the eradication of mental illness.
-
