@@ -43,11 +43,11 @@ var onMoodButtonClicked = function()
 		console.log("How did I get here...");
 		return;
 	}
-	
+
 	// Create an array of measurements
 	var measurements = 	[
 							{
-								timestamp: 	Math.floor(Date.now() / 1000), 
+								timestamp: 	Math.floor(Date.now() / 1000),
 								value: 		moodValue
 							}
 						];
@@ -64,17 +64,17 @@ var onMoodButtonClicked = function()
 											unit:					"/5"
 										}
 									]
-									
+
 						};
 	// Request our background script to upload it for us
 	chrome.extension.sendMessage(request);
-	
+
 	clearNotifications();
 	window.close();
-	
+
 	/*var sectionRateMood = document.getElementById("sectionRateMood");
 	var sectionSendingMood = document.getElementById("sectionSendingMood");
-	
+
 	sectionRateMood.className = "invisible";
 	setTimeout(function()
 	{
@@ -83,7 +83,7 @@ var onMoodButtonClicked = function()
 			sectionSendingMood.innerText = "Sending mood";
 			sectionSendingMood.style.display = "block";
 			sectionSendingMood.className = "visible";
-			pushMeasurement(measurement, function(response) 
+			pushMeasurement(measurement, function(response)
 				{
 					sectionSendingMood.className = "invisible";
 					setTimeout(function()
@@ -91,17 +91,17 @@ var onMoodButtonClicked = function()
 						window.close();
 					}, 300);
 				});
-				
+
 			clearNotifications();
 		}, 400 );*/
 }
 
-document.addEventListener('DOMContentLoaded', function () 
+document.addEventListener('DOMContentLoaded', function ()
 {
 	//console.log('pankajkmar');
-	var wDiff = (346 - window.innerWidth);
-	var hDiff = (60 - window.innerHeight);
-	
+	var wDiff = (380 - window.innerWidth);
+	var hDiff = (70 - window.innerHeight);
+
 	window.resizeBy(wDiff, hDiff);
 
 	// cookie function call here to remove the error.
@@ -130,5 +130,3 @@ document.addEventListener('DOMContentLoaded', function ()
 	setMoodButtonListeners();
 
 });
-
-
