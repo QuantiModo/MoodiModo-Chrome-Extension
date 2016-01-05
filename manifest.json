@@ -3,7 +3,7 @@
 
   "name": "MoodiModo (Beta)",
   "description": "Effortless mood-tracking.",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "options_page": "options/options.html",
   "icons": {"16"	: "images/icon_16.png",
 			"48"	: "images/icon_48.png",
