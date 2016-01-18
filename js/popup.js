@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function ()
 		  console.log(cookie.value);
 		}
 		else {
-			var url = "https://app.quantimo.do/wp-login.php";
+			var url = "https://app.quantimo.do/api/v2/auth/login";
 			chrome.tabs.create({"url":url, "selected":true});
 		}
 	});
