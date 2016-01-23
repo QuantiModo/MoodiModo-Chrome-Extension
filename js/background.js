@@ -74,10 +74,10 @@ chrome.notifications.onClicked.addListener(function(notificationId)
 	{
 		var windowParams = {url: "popup.html",
 							type: 'panel',
-							width: 380,
-							height: 70,
-							top: screen.height,
-							left: screen.width
+							top: 0.6 * screen.height,
+							left: screen.width,
+							width: 371,
+							height: 70
 						   };
 		chrome.windows.create(windowParams);
 	}
