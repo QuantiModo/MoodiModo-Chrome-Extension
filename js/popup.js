@@ -98,7 +98,7 @@ var onMoodButtonClicked = function()
 
 document.addEventListener('DOMContentLoaded', function ()
 {
-	//console.log('pankajkmar');
+
 	var wDiff = (380 - window.innerWidth);
 	var hDiff = (70 - window.innerHeight);
 

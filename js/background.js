@@ -24,7 +24,7 @@ function isUserLoggedIn(resultListener)
 */
 chrome.runtime.onInstalled.addListener(function()
 {
-	var notificationInterval = parseInt(localStorage["notificationInterval"] || "180");
+	var notificationInterval = parseInt(localStorage["notificationInterval"] || "60");
 
 	if(notificationInterval == -1)
 	{
@@ -75,7 +75,7 @@ chrome.notifications.onClicked.addListener(function(notificationId)
 		var windowParams = {url: "popup.html",
 							type: 'panel',
 							top: 0.6 * screen.height,
-							left: screen.width,
+							left: screen.width - 371,
 							width: 371,
 							height: 70
 						   };
