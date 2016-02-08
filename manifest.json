@@ -3,7 +3,7 @@
 
   "name": "MoodiModo Mood Tracker",
   "description": "Effortless mood-tracking right in your browser.",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "options_page": "options/options.html",
   "icons": {"16"	: "images/icon_16.png",
 			"48"	: "images/icon_48.png",
@@ -18,7 +18,7 @@
   ],
   "browser_action": {
     "default_icon": "images/icon.png",
-    "default_popup": "popup.html"
+    "default_popup": "app.html"
   },
   "background": {
     "scripts": ["js/background.js"],
