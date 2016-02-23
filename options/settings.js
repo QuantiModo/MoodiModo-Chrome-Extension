@@ -2,13 +2,13 @@ function loadAccountDetails()
 {
 	var xhr = new XMLHttpRequest();
 	xhr.open("GET", "https://app.quantimo.do/api/user/me", true);
-	xhr.onreadystatechange = function() 
+	xhr.onreadystatechange = function()
 		{
-			if (xhr.readyState == 4) 
+			if (xhr.readyState == 4)
 			{
 				var userObject = JSON.parse(xhr.responseText);
 				/*
-				 * it should hide and show sign in button based upon the cookie set or not
+				 * it should hide and show sign in button if the user is logged in or not
 				 */
 				if(typeof userObject['displayName'] !== "undefined")
 				{
@@ -32,15 +32,15 @@ function loadAccountDetails()
 
 var onIntervalChanged = function()
 {
-	var notificationInterval = parseInt(localStorage["notificationInterval"] || "180");
+	var notificationInterval = parseInt(localStorage["notificationInterval"] || "60");
 	var newNotificationInterval = parseInt(this.value);
 	console.log("New: " + newNotificationInterval + " old: " + notificationInterval);
-	
+
 	if(newNotificationInterval != notificationInterval)
 	{
 		notificationInterval = newNotificationInterval;
 		localStorage["notificationInterval"] = notificationInterval;
-		
+
 		if(notificationInterval == -1)
 		{
 			chrome.alarms.clear("moodReportAlarm");
