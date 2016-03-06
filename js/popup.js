@@ -58,7 +58,7 @@ var onMoodButtonClicked = function()
 										{
 											measurements:			measurements,
 											name: 					"Overall Mood",
-											source: 				"MoodiModo",
+											source: 				"MoodiModo Chrome Extension",
 											category: 				"Mood",
 											combinationOperation: 	"MEAN",
 											unit:					"/5"
@@ -94,7 +94,7 @@ var onMoodButtonClicked = function()
 
 			clearNotifications();
 		}, 400 );*/
-}
+};
 
 document.addEventListener('DOMContentLoaded', function ()
 {
@@ -124,7 +124,6 @@ document.addEventListener('DOMContentLoaded', function ()
 			}
 		};
 	xhr.send();
-	});
 
 	/*
 	var backgroundPage = chrome.extension.getBackgroundPage();
